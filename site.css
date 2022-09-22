@@ -1,0 +1,87 @@
+main,
+body,
+footer {
+  background-color: rgb(0, 0, 0);
+  padding: 4px;
+  color: rgb(255, 255, 255);
+}
+h1,
+h2 {
+  color: rgb(255, 255, 255);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+#headshot {
+  border: 2px solid coral;
+  padding: 2px 2px;
+  max-width: 20%;
+  max-height: 80% !important;
+  border-radius: 10%;
+}
+
+main {
+  grid-area: main;
+}
+
+.experience {
+  border: inset 1px;
+  margin-bottom: 15px;
+  padding: 4px;
+  background-color: rgb(70, 0, 0);
+  color: grey;
+}
+
+.experience .title {
+  font-weight: bolder;
+}
+
+footer {
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  grid-area: footer;
+  background-color: transparent !important;
+}
+
+aside {
+  grid-area: aside;
+}
+
+#menu li {
+  display: inline;
+  padding: 10px;
+  background-color: beige;
+  margin: 4px;
+}
+#menu li a {
+  text-decoration: none;
+  color: black !important;
+}
+
+#menu li.active {
+  background-color: rgb(248, 117, 117);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  grid-area: header;
+}
+
+/* header #headshot,
+header #menu {
+  display: inline;
+  vertical-align: middle;
+} */
+
+.container {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "main aside"
+    "footer footer";
+  grid-template-columns: auto 200px;
+  grid-gap: 8px;
+}
