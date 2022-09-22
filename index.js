@@ -17,7 +17,26 @@ if (dayOfWeek === 0 || dayOfWeek === 6) {
   );
 }
 
+const formInfo = document.getElementById("formInfo");
+
 function showMessage(message) {
-  document.writeln("<p>" + message + "</p>");
-  document.writeln("<hr/>");
+  formInfo.innerHTML = "<p>" + message + "</p>";
+}
+
+const contactForm = document.getElementById("contactForm");
+
+contactForm.addEventListener("submit", function (event) {
+  event.preventDefault();
+  showMessage("Sending your message right now please wait...");
+});
+
+const experiences = document.getElementsByClassName("experience");
+for (let i = 0; i < experiences.length; i++) {
+  const item = experiences[i];
+  item.addEventListener("mouseenter", function (event) {
+    event.target.style = "background-color: #302010;";
+  });
+  item.addEventListener("mouseleave", function (event) {
+    event.target.style = "";
+  });
 }
