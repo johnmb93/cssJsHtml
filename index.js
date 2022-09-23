@@ -24,10 +24,10 @@ function showMessage(message) {
 }
 
 const contactForm = document.getElementById("contactForm");
-
 contactForm.addEventListener("submit", function (event) {
   event.preventDefault();
-  showMessage("Sending your message right now please wait...");
+  const contact = new Contact();
+  contact.send;
 });
 
 const experiences = document.getElementsByClassName("experience");
@@ -39,4 +39,24 @@ for (let i = 0; i < experiences.length; i++) {
   item.addEventListener("mouseleave", function (event) {
     event.target.style = "";
   });
+}
+
+class Contact {
+  fullName = "";
+  email = "";
+  subject = "";
+  body = "";
+
+  send() {
+    console.info(this.formatMessage);
+    showMessage(
+      "We are currently working on the email function please try again later "
+    );
+  }
+  formatMessage() {
+    return `To: ${this.fullName}
+    Email: ${this.email}
+    Subject: ${this.subject}
+    Body: ${this.body}`;
+  }
 }
