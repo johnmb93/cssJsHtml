@@ -1,8 +1,8 @@
-let hasJob = true;
+let hasJob = false;
 if (hasJob) {
   document.writeln("Thank you for visiting I currently have a job | ");
 } else {
-  document.writeln("Thank you for visiting Please send me job offers");
+  document.writeln("Thank you for visiting Please send me job offers. || ");
 }
 
 let today = new Date();
@@ -13,7 +13,7 @@ if (dayOfWeek === 0 || dayOfWeek === 6) {
   );
 } else {
   document.writeln(
-    "Please expect an email shortly after sending me job offers"
+    "Please expect an email shortly after sending me job offers for salaries starting at $1M+  "
   );
 }
 
